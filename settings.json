@@ -1,0 +1,39 @@
+{
+  "name": "splittuneel-settings",
+  "networkAccessObject": "~Common~split_tunnel_na",
+  "inputProperties": [
+    {
+      "id": "deviceReference",
+      "type": "REFERENCE",
+      "value": {
+        "link": "localhost"
+      }
+    }
+  ],
+  "o365addressURL": "https://support.content.office.net/en-us/static/O365IPAddresses.xml",
+  "msProducts": ["o365",
+    "LYO",
+    "Planner",
+    "Teams",
+    "ProPlus",
+    "OneNote",
+    "Yammer",
+    "EXO",
+    "Identity",
+    "Office365Video",
+    "WAC",
+    "SPO",
+    "RCA",
+    "Sway",
+    "EX-Fed",
+    "OfficeMobile",
+    "CRLs",
+    "OfficeiPad",
+    "EOP"
+  ],
+  "configProcessorTimeoutSeconds": 200,
+  "configurationProcessorReference": {
+    "link": "https://localhost/mgmt/shared/iapp/processors/bigip-settings-config"
+  },
+  "state": "TEMPLATE"
+}
