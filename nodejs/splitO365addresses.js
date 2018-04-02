@@ -46,7 +46,7 @@ splitO365addresses.prototype.onGet = function(restOperation) {
           var tempobj = {'subnet': value};
           addresses.push(tempobj);
         });
-        var body = {'addressSpaceIncludeSubnet': addresses};
+        var body = {'addressSpaceExcludeSubnet': addresses};
         //var client = new Client(options_auth);
         var args = {
           data: body,
