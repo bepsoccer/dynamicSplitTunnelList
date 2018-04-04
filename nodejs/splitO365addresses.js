@@ -6,7 +6,7 @@ splitO365addresses.prototype.isPublic = true;
 var logger = require('f5-logger').getInstance();
 var Client = require('node-rest-client').Client;
 var includes = require('array-includes');
-//var cidrClean = require('cidr-clean');
+var cidrClean = require('cidr-clean-bp');
 
 /**
 * handle onGet HTTP request
@@ -40,14 +40,13 @@ splitO365addresses.prototype.onGet = function(restOperation) {
         }
       }
       if (newlist.length) {
-        //var newlist = cidrClean(newlist);
+        var newlist = cidrClean(newlist);
         var addresses = [];
         newlist.forEach(function(value) {
           var tempobj = {'subnet': value};
           addresses.push(tempobj);
         });
         var body = {'addressSpaceExcludeSubnet': addresses};
-        //var client = new Client(options_auth);
         var args = {
           data: body,
           headers: {
