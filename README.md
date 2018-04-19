@@ -14,7 +14,7 @@ All settings are currently hard coded in [settings.json](/nodejs/settings.json).
 
 For more information see [DevCentral](https://devcentral.f5.com/Wiki/Default.aspx?Page=HowToSamples_deploy_icontrol_extension&NS=iControlLX).
 
-##Usage ##
+## Usage ##
 First update the networkAccessObject property in [settings.json](/nodejs/settings.json) file using the [F5 Exclipse plug-in](https://devcentral.f5.com/articles/f5-programmability-for-eclipse-installation-instructions-20883) to your NA object and the worker should restart using the new setting.  Then just run a simple GET to https://{{your_host}}/mgmt/shared/dynamicSplitTunnelList/updateO365addresses.
 
 In future a future release this will most like be changed to a POST, PUT, or PATCH that will accept input parameters so the settings aren't hardcoded.  The is just a working pre-release.
